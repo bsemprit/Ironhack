@@ -1,4 +1,5 @@
 class ShoppingCart
+	
   def initialize
       @items = []
   end
@@ -7,9 +8,19 @@ class ShoppingCart
       #Add your item to @items
       @items.push(item)
   end
+  #Third Iteration: create a checkout method that will total up the 
+  #cost of all of the items in your cart.
+  def checkout
+  	total_price = 0 #start with 0 total
+  	@items.each do |item|
+  		total_price += item.price
+  	end
+  	puts "Your total today is $#{total_price}. Have a nice day!"
+  end
 end
 
 class Item 
+	attr_reader :name, :price
   def initialize(name, price)
       @name = name
       @price = price
@@ -60,14 +71,25 @@ end
 # Vacuum Cleaner: 150€ / $150
 # Anchovies: 2€ / $2 each
 
+# banana = Fruit.new("Banana", 10)
+# orange_juice = Fruit.new("Orange Juice", 10)
+# rice = Item.new("Rice", 1)
+# vacuum_cleaner = Houseware.new("Vacuum Cleaner", 150)
+# anchovies = Item.new("Anchovies", 2)
+
+# puts vacuum_cleaner.price
+# puts orange_juice.price
+# puts rice.price
+# puts banana.price
+# puts anchovies.price
+
+joshs_cart = ShoppingCart.new
 banana = Fruit.new("Banana", 10)
-orange_juice = Fruit.new("Orange Juice", 10)
+vaccuum = Houseware.new("Vaccuum", 150)
+oj = Item.new("Orange Juice", 10)
 rice = Item.new("Rice", 1)
-vacuum_cleaner = Houseware.new("Vacuum Cleaner", 150)
 anchovies = Item.new("Anchovies", 2)
 
-puts vacuum_cleaner.price
-puts orange_juice.price
-puts rice.price
-puts banana.price
-puts anchovies.price
+joshs_cart.add_item(oj)
+joshs_cart.add_item(rice)
+joshs_cart.checkout
