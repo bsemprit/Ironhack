@@ -15,6 +15,10 @@ class ShoppingCart
   	@items.each do |item|
   		total_price += item.price
   	end
+  	#Fourth Iteration: If there are 5 or more items, 10% discount
+  	if @items.length >= 5
+  		total_price = total_price * 0.9
+  	end
   	puts "Your total today is $#{total_price}. Have a nice day!"
   end
 end
@@ -92,4 +96,7 @@ anchovies = Item.new("Anchovies", 2)
 
 joshs_cart.add_item(oj)
 joshs_cart.add_item(rice)
+joshs_cart.add_item(banana)
+joshs_cart.add_item(vaccuum)
+joshs_cart.add_item(anchovies)
 joshs_cart.checkout
