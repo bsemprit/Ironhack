@@ -2,15 +2,15 @@ name = “mr. Bond”
 capitalized_name = name.capitalize
 puts "Hello #{capitalized_name}"
 
-flavours = “chocolate, mint, strawberry, vanilla, caramel, chili”
-flavours_array = flavours.split(“, “)
+flavours = "chocolate, mint, strawberry, vanilla, caramel, chili"
+flavours_array = flavours.split(", ")
 
-“How many characters are in this string?”.length
+"How many characters are in this string?".length
 
-"awesome".include? "you"
-"awesome".include? "me"
+"awesome".include? "you" #returns false
+"awesome".include? "me" #returns true
 phrase = "Just kidding, you’re awesome too"
-phrase.include? "aw"
+phrase.include? "aw" #returns true
 
 age = 28
 age.odd? #returns false

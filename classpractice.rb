@@ -40,7 +40,7 @@ class Dog < Animal #extends Animal class to include Dog
 end
 
 class Cat < Animal
-end
+ends
 
 class Human < Animal #extends class Animal to include human with salary and description
   def initialize(name, salary)
