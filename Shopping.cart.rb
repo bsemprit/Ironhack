@@ -12,13 +12,10 @@ class Item
 
   def price
       #Your beautiful code goes here
-      if possible_discount != @price
-      	@price = possible_discount
-      else
-      	@price
+      price = @price
   end
 end
-end
+
 
 class Houseware < Item
   def price
@@ -65,3 +62,7 @@ vacuum_cleaner = Houseware.new("Vacuum Cleaner", 150)
 anchovies = Item.new("Anchovies", 2)
 
 puts vacuum_cleaner.price
+puts orange_juice.price
+puts rice.price
+puts banana.price
+puts anchovies.price
