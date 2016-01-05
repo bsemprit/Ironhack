@@ -1,6 +1,11 @@
 class ShoppingCart
   def initialize
-    @items = []
+      @items = []
+  end
+
+  def add_item(item) #Second Iteration: add items
+      #Add your item to @items
+      @items.push(item)
   end
 end
 
