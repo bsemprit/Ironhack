@@ -202,6 +202,10 @@ body {
 	color: #666;
 }
 
+.foot li a:hover {
+	text-decoration: underline;
+}
+
 .left_foot {
 	float: left;
 }
