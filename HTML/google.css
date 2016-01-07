@@ -20,15 +20,20 @@ body {
 }
 
 .top {
-	width: 301px;
+	width: 501px;
 	height:30px;
 	padding: 0px 15px 0px 30px;
 	float: right;
 }
 
+#centertop {
+	float: right;
+	width: 320px;
+	height: 100%;
+}
+
 .top_bar {
 	display: inline-block;
-	clear: both;
 	padding-left: 15px;
 }
 
@@ -54,8 +59,9 @@ body {
 }
 
 #apps_button {
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
+	padding-top: 10px;
 }
 
 #apps_button img {
@@ -64,9 +70,12 @@ body {
 }
 
 #notification_button {
-	width: 30px;
-	height: 30px;
-	background-color: blue;
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	padding-left: 0px;
+	margin-left: 15px;
+	border-radius: 50%
 }
 
 #notification_button img {
@@ -75,8 +84,8 @@ body {
 }
 
 #account_button {
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 }
 
 #account_button img {
