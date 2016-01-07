@@ -8,9 +8,6 @@ body {
 	height: 100%;
 }
 
-.header {
-
-}
 
 .full_top {
 	
@@ -24,6 +21,7 @@ body {
 	height:30px;
 	padding: 0px 15px 0px 30px;
 	float: right;
+	font-size: 13px;
 }
 
 #centertop {
@@ -35,6 +33,7 @@ body {
 .top_bar {
 	display: inline-block;
 	padding-left: 15px;
+	text-align: right;
 }
 
 .links {
@@ -112,19 +111,26 @@ body {
 
 .search_box {
 	height: 38px;
-	width: 584px;
-	border-color: black;
+	width: 484px;
 	background-color: white;
-	
-	border: 1px solid;
 	margin:auto;
 	clear: both;
+}
+.microphone {
+	width: 41px;
+	height: 38px;
+	float: right;
+}
+.microphone #mike{
+	width: 20px;
+	height: 28px;
+	padding: 5px 4px;
 }
 
 .searching {
 	height: auto;
 	width: 100%;
-	
+	border: 1px solid #d9d9d9;
 	float: left;
 }
 
@@ -144,7 +150,8 @@ body {
 }
 
 .search_buttons {
-	margin: auto;
+	text-align: center;
+    margin-top: 40px;
 }
 
 .search_buttons_li {
@@ -177,11 +184,19 @@ body {
 	margin: 0px;
 	background-color: #F8F8F8;
 	clear: both;
-
+	position: absolute;
+	bottom: 0;
+	border-top: 1px solid #e4e4e4;
 }
 
 .foot li {
 	list-style: none;
 	float: left;
 	padding: 0px 16px;
+}
+
+.foot li a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #666;
 }
