@@ -1,6 +1,8 @@
 body {
-	font-family: Verdana;
+	font-family: Signika Negative;
 	color: Grey;
+	font-size: 16px;
+	margin:0px;
 }
 
 h1 {
@@ -12,7 +14,7 @@ article {
 	width: 1000px;
 	height: 1000px;
 	background-color: Pink;
-	position: relative;
+	
 }
 
 header, footer {
@@ -22,12 +24,12 @@ header, footer {
 	text-align: center;
 }
 
-.left {
+
+.image_left {
+	height:600px;
 	width: 440px;
-	height: 600px;
-	background-color: Aquamarine;
-	margin: 30px 30px;
-	float:left;
+	margin:30px 30px;
+	float: left;
 }
 
 .right {
@@ -44,10 +46,8 @@ header, footer {
 	background-color: Aquamarine;
 	bottom: 0;
 	margin: 30px;
-	position:absolute;
-}
-section {
-	margin: 50px;
+	clear: both;
+	
 }
 
 .bottom ul:last-child{
@@ -62,8 +62,6 @@ section {
 		padding: 1em;
 }
 
-img {
-	height:100%;
-	width: auto;
-	margin:0px 50px;
+.footer_text {
+	margin: 0px;
 }
