@@ -1,0 +1,69 @@
+body {
+	font-family: Verdana;
+	color: Grey;
+}
+
+h1 {
+	text-align: center;
+}
+
+article {
+	margin: auto;
+	width: 1000px;
+	height: 1000px;
+	background-color: Pink;
+	position: relative;
+}
+
+header, footer {
+	width: 100%;
+	height: 100px;
+	background-color: Aquamarine;
+	text-align: center;
+}
+
+.left {
+	width: 440px;
+	height: 600px;
+	background-color: Aquamarine;
+	margin: 30px 30px;
+	float:left;
+}
+
+.right {
+	width: 440px;
+	height: 600px;
+	background-color: Aquamarine;
+	float: right;
+	margin: 30px 30px;
+}
+
+.bottom {
+	width: 940px;
+	height: 300px;
+	background-color: Aquamarine;
+	bottom: 0;
+	margin: 30px;
+	position:absolute;
+}
+section {
+	margin: 50px;
+}
+
+.bottom ul:last-child{
+	list-style-type: line;
+}
+
+.bottom ul:last-child li {
+		display: inline;
+}
+
+.bottom ul:last-child li a {
+		padding: 1em;
+}
+
+img {
+	height:100%;
+	width: auto;
+	margin:0px 50px;
+}
