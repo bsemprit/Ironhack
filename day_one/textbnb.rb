@@ -28,6 +28,13 @@ homes.each do |hm|
   puts hm.name
 end
 
+def array_printer(array_of_homes)
+	array_of_homes.each do |hm|
+  		puts "#{hm.name} in #{hm.city}"
+  		puts "$#{hm.price} with a capacity of #{hm.capacity}"
+	end
+end
+
 # Iteration 2: Sorting
 
 # Use sort to order the homes by their price. Lowest to highest should be the default. 
@@ -36,25 +43,22 @@ end
 # Use different calls to the sort method to do all of these.
 
 puts "How do you want to sort the homes?"
-puts "Enter 1) Price by low to high \n2) Price by high to low\n3) Capacity by high to low\n4)Capacity by low to high: "
-input = gets.chomp.to_i
-if input == 1 
-	sorted_homes = homes.sort {|x, y| x.price <=> y.price}
-	sorted_homes.each do |hm|
-  		puts hm.name
-	end
+puts "Enter \n1) Price by low to high \n2) Price by high to low\n3) Capacity by high to low\n4)Capacity by low to high: \n"
+user_input = gets.chomp.to_i
+if user_input == 1 
+	lowest_to_highest = homes.sort {|home_a, home_b| home_a.price <=> home_b.price}
+	array_printer(lowest_to_highest)
 
-elsif input == 2 
-	sorted_homes = homes.sort {|x, y| y.price <=> x.price}
-	sorted_homes.each do |hm|
-  		puts hm.name
-	end
+elsif user_input == 2 
+	highest_to_lowest = homes.sort {|home_a, home_b| home_b.price <=> home_a.price}
+	array_printer(highest_to_lowest)
 	
-elsif input == 3 
-	sorted_homes = homes.sort {|x, y| x.capacity <=> y.capacity}
-	sorted_homes.each do |hm|
-  		puts hm.name
-	end
+elsif user_input == 3 
+	cap_lowest_to_highest = homes.sort {|home_a, home_b| home_a.capacity <=> home_b.capacity}
+	array_printer(cap_lowest_to_highest)
+elsif user_input == 4 
+	cap_highest_to_lowest = homes.sort {|home_a, home_b| home_b.capacity <=> home_a.capacity}
+	array_printer(cap_highest_to_lowest)
 	
 else 
 	puts "You must enter the right number, please try again."
