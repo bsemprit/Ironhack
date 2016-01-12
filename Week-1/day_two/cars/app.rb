@@ -3,6 +3,7 @@
 require_relative("lib/car.rb")
 require_relative("lib/flying_car.rb")
 require_relative("lib/invisible_car.rb")
+require_relative("lib/person.rb")
 
 #variable and method names should be lowercase_with_underscore
 bella_mini_cooper = Car.new("red", "Mini", "run run")
@@ -21,6 +22,15 @@ my_flying_car.fly
 my_invisible_car = InvisibleCar.new("camo", "Ford", "errk")
 my_invisible_car.rev
 
+bianca = Person.new("Bianca", 24)
+
+#Below doesn't work because you can't change the name because it is only read accessible
+# bianca.name = "Bixi"
+puts bianca.name
+puts bianca.age
+
+bianca.age = 12
+puts bianca.age
 
 
 
