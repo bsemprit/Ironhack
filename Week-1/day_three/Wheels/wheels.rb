@@ -6,8 +6,6 @@ class Helicopter
 	end
 end
 
-chopper = Helicopter.new
-
 class Car
 	attr_reader :sounds, :wheels
 	def initialize
@@ -16,42 +14,45 @@ class Car
 	end
 end
 
-mini = Car.new
+
 
 class Tricycle
 	attr_reader :sounds, :wheels
 	def initialize
 		@wheels = 3
-		@sounds = "Vroom"
+		@sounds = "Dananananana"
 	end
 end
 
-tryke = Tricycle.new
+
 
 class WheelCounter
 	def initialize
 		@vehicles = []
-		@total = 0
+		
 	end
 	def add_vehicle(vehicle)
-		@vehicle = vehicle
-		@vehicles << @vehicle
+		@vehicles << vehicle
 	end
 
 	def wheel_counter
-		
+		total_wheels = 0
 		@vehicles.each do |car|
-			@total += car.wheels
+			total_wheels += car.wheels
 		end
 
-		@total
+		total_wheels
 
 	end
 end
 
+chopper = Helicopter.new
+batmobile = Tricycle.new
+mini = Car.new
+
 counter = WheelCounter.new
 counter.add_vehicle(chopper)
 counter.add_vehicle(mini)
-counter.add_vehicle(tryke)
+counter.add_vehicle(batmobile)
 
 puts counter.wheel_counter
