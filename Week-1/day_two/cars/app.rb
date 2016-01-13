@@ -24,7 +24,8 @@ my_invisible_car.rev
 
 bianca = Person.new("Bianca", 24)
 
-#Below doesn't work because you can't change the name because it is only read accessible
+#Below d
+oesn't work because you can't change the name because it is only read accessible
 # bianca.name = "Bixi"
 puts bianca.name
 puts bianca.age

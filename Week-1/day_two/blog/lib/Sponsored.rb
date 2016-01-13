@@ -1,8 +1,8 @@
 class Sponsored < Post
 	def display
-			puts "************#{@title}*********"
+			puts "\n\n************#{@title}*********"
 			puts "*****************"
-			puts "#{@text}"
+			puts "\n#{@text}"
 			puts "------------------"
 	end
 end

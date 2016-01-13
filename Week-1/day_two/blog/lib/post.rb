@@ -6,9 +6,9 @@ class Post
 		@text = text
 	end
 	def display
-			puts "#{@title}"
+			puts "\n\n#{@title}"
 			puts "*****************"
-			puts "#{@text}"
+			puts "\n#{@text}"
 			puts "------------------"
 	end
 
