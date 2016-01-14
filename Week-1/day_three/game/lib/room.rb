@@ -6,5 +6,8 @@ class Room
 		@description = description
 	end
 
+	def display_description
+		puts @description
+	end
 
 end
