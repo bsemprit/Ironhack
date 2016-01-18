@@ -1,4 +1,6 @@
 class Game
+	attr_accessor :current_room
+
 	def initialize
 		@rooms = []
 		@current_room = 0
@@ -61,6 +63,10 @@ class Game
 			@user_input = gets.chomp
 			
 		end
+
+	def change_rooms
+		
+
 	end
 
 end

@@ -10,6 +10,7 @@ class Room
 		puts @description
 	end
 
+
 	def room_item
 		list_of_items = [
 							"book",

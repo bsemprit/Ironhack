@@ -13,6 +13,7 @@ class Blog
 		@new_posts.push(@post)
 	end
 
+
 	def next_page
 		if !last_page?
 		@currentpage += 1
@@ -70,4 +71,6 @@ class Blog
 		pagination_section
 		
 	end
+
+
 end

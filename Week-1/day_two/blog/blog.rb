@@ -2,6 +2,7 @@ require_relative("lib/blog_class.rb")
 require_relative("lib/post.rb")
 require_relative("lib/Sponsored.rb")
 
+require 'colorize'
 
 
 # Post title1
@@ -43,3 +44,4 @@ while user_input !=exit
 user_input = gets.chomp
 
 end
+

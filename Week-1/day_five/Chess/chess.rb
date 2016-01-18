@@ -36,6 +36,7 @@ puts white_rook_right.move?(1, 1)
 
 puts "Bad moves - false"
 puts white_rook_right.move?(7, 2)
+<<<<<<< HEAD
 puts white_rook_right.move?(4, 3) 
 
 white_bishop_left = Bishop.new(3, 1, "white")
