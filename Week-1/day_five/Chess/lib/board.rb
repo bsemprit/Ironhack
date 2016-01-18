@@ -50,9 +50,11 @@ class Board
 		if @current_position == ""
 			puts "The position you inputted was outside the range of the board, please try again."
 			accept
+		else
+			puts "#{@current_position}"
 		end
 
-		puts "#{@current_position}"
+		
 
 		puts "Where would like to move?"
 		print ">"
@@ -61,8 +63,10 @@ class Board
 		if @destination == ""
 			puts "The position you inputted was outside the range of the board, please try again."
 			accept
+		else
+			puts "#{@destination}"
 		end
-		puts "#{@destination}"
+		
 
 	end
 
@@ -83,13 +87,14 @@ class Board
 			"g" => 7,
 			"h" => 8,
 		}
+
 		dictionary.each do |key, value|
 
 			if letter == "#{key}"
 				letter = value
 				break
 			else 
-				counter +=1
+				letter = "nil"
 			end
 
 		end
@@ -98,7 +103,7 @@ class Board
 		
 		
 
-		if counter == 9 || number > "8" || number < "0"
+		if letter == "nil" || number > "8" || number < "1"
 			puts "IF Counter : #{counter}"
 			new_position = ""
 		else
@@ -109,5 +114,25 @@ class Board
 
 	end
 	#----------------------------
+
+	def move?(@current_position, @destination)
+
+		if @current_position == @destination
+			false
+		else
+
+			@board_placement.each do | position, piece| 
+				if @current_position == position
+					piece.move?(@destination[0], @destination[1])
+					if piece.move? == true
+						true
+					else
+						puts "Invalid move for #{position}, please re-enter move."
+						false
+					end
+				end
+			end
+		end 
+	end
 
 end
