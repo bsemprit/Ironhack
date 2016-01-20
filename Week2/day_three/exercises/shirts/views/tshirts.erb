@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> Bianca's T-shirt Store</h1>
+
+	<p>The amazing products are:</p>
+	<ul>
+		<%@shirts.each_with_index do |tshirt, i| %>
+		<li>
+			<a href="/tshirt/<%= i +1%>">
+			<%=tshirt%>
+			</a>
+		</li>
+		<% end %>
+	</ul>
+
+
+
+
+</body>
+</html>
