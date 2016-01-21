@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul>
+		
+		<% @task_list.each do |task| %>
+			<li>
+				<%= task.content %>
+			</li>
+
+		<% end %>
+	</ul>
+	<h2>Want to go <a href="/"> home</a>?</h2>
+
+
+</body>
+</html>
