@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div align="center">
+	<h1>IMDB Gem Test Results</h1>
+
+	<h4>What movie contains this plot? </h4>
+	<p><%=@random_movie.plot_summary%></p> 
+
+
+	<p>
+		The search term <strong>"<%=@search_result%>"</strong>
+		resulted in <%= @number_of_results %> movies.
+	</p>
+
+	<div style="width:600px">
+	<% @movie_posters.each do |movie| %>
+
+
+
+
+
+		<% if movie.plot_summary == @random_movie.plot_summary%>
+		<img style="width: 180px; height:250px;" src="<%= movie.poster %>" onClick="alert('yay')">
+		<% else %>
+		<img style="width: 180px; height:250px;" src="<%= movie.poster %>" onClick="alert('nay')">
+		<% end %>
+
+
+
+
+		
+	
+		<form action="/quiz_answer" method="Post">
+			<button type="submit" name="movie_title" value= "<%=movie.title%>" >This one</button>
+			<input type="hidden" name="random_movie" value="<%= @random_movie.title %>">
+		</form>
+
+	<% end %>
+	</div>
+	</div>
+</body>
+</html>

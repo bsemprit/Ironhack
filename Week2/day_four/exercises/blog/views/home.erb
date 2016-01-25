@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div align="left">
+	<h1>My Awesome Blog of today</h1>
+
+	
+		<% @posts.each do |post| %>
+		<%= post.title %> 
+		<br>
+		<%= post.date %><br>
+		<a href="/post/<%=post.id%>">Post content</a><br>
+		---------------------------------------------
+		<br>
+		<br>
+		<% end %>
+
+	
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> <%= @tshirt_type %> </h1>
+	<p>Would you like to add this shirt to your cart?</p>
+
+
+	<form action="/add_to_cart" method="post">
+		<button type="submit" name="tshirt_id" value="<%= @tshirt_id %>">
+			Add to cart
+		</button>
+	</form>
+
+</body>
+</html>

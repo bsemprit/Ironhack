@@ -6,17 +6,21 @@
 <body>
 	<h1> Bianca's T-shirt Store</h1>
 
+
+
 	<p>The amazing products are:</p>
 	<ul>
 		<%@shirts.each_with_index do |tshirt, i| %>
 		<li>
-			<a href="/tshirt/<%= i +1%>">
+			<a href="/tshirts/<%= i +1%>">
 			<%=tshirt%>
 			</a>
 		</li>
 		<% end %>
 	</ul>
-
+	<br>
+	<p>You have <%= @number_of_items%> items in your cart.</p>
+	<a href="/checkout">Checkout</a>
 
 
 
