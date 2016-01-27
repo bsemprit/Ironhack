@@ -1,0 +1,72 @@
+body {
+	font-family: roboto;
+	background-color: #ddd;
+}
+
+.bounty_stuff {
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.top_user {
+	padding: 10px;
+}
+
+.bounty_border {
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+}
+
+.user_comment {
+	/*width: 200px;*/
+	/*margin: auto;*/
+}
+
+.bottom_comments {
+	padding: 10px 13px;
+}
+
+.profile_image {
+	width: 30px;
+	height: 30px;
+	border: 2px solid black;
+}
+
+.lifeguard {
+	background-color: black;
+}
+
+.coins, .glyphicon-euro {
+	color: gold;
+	font-size: 14px;
+}
+
+.html_css_buttons {
+	color: lightgrey;
+	margin-left: 5px;
+}
+
+.now {
+	color: red;
+}
+
+.comment {
+	color: lightblue;
+	border: 1px solid lightblue;
+	border-radius: 20px;
+}
+
+.grey_circle {
+	width: 30px;
+	height: 30px;
+	border-radius: 100px;
+	background-color: grey;
+	margin: auto;
+
+}
+
+.commenting_row {
+	padding: 5px 5px;
+}

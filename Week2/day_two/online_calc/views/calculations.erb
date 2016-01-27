@@ -9,11 +9,12 @@
 
   <h1>Anything</h1>
   <form action="/calculate" method="POST">
-  <input type="number" name="first_number" value="<%=@gotten_value%>">  <input type="number" name="second_number" placeholder="second_number">
-  <button type="submit" name="operation" value="addition">Add</button>
-  <button type="submit" name="operation" value="subtraction">Subtraction</button>
-  <button type="submit" name="operation" value="multiply">Multiply</button>
-  <button type="submit" name="operation" value="divide">Divide</button>
+  <input type="number" name="first_number" value="<%=@saved_number%>" placeholder="first_number">  <input type="number" name="second_number" placeholder="second_number">
+  <button type="submit" name="operation" value="add">Add</button>
+  <button type="submit" name="operation" value="sub">Subtraction</button>
+  <button type="submit" name="operation" value="mul">Multiply</button>
+  <button type="submit" name="operation" value="div">Divide</button>
+  <button type="reset" >Reset</button>
 
   </form>
 

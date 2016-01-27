@@ -1,0 +1,61 @@
+body {
+	background-image: url(https://trello-backgrounds.s3.amazonaws.com/53baf533e697a982248cd73f/4200x4200/48dbf0b5a546541e847e267a5dcd2201/shutterstock_134707556.jpg);
+	background-size: cover;
+}
+
+.home_nav {
+	background-color: transparent;
+	color: white;
+	border-color: transparent;
+	padding: 8px;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.trello {
+	margin: auto;
+	display: block;
+	opacity: 0.5;
+}
+
+.trello:hover {
+	opacity: 1.0;
+}
+
+.right_top_bar {
+	text-align: right;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 700;
+	border-color: transparent;
+}
+
+.submit_btn {
+	
+}
+
+.login_btn {
+	color: white;
+	background: rgba(255, 255, 255, 0.4);
+}
+
+.login_btn:hover {
+	color: white;
+	background: rgba(255, 255, 255, 0.45);
+}
+
+.menu {
+	background-color: #edeff0;
+	border: .1px solid black;
+	box-shadow: 0 0 6px rgba(0,0,0,.4);
+}
+
+.centered_menu {
+	text-align: center;
+	display: block;
+}
+
+.black_menu_link a:link {
+	text-decoration: none;
+}

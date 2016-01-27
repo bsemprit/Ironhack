@@ -13,8 +13,8 @@
 		<%="#{@first} #{@op} #{@second} = #{@result}"%>
 	
 
-  <form action="/saved" method="POST">
-  <input type="hidden" name= "save" value="<%=@result%>">
+  <form action="/save" method="POST">
+<!--   <input type="hidden" name= "save" value="<%=@result%>"> -->
   <button type="submit" name="save" value="<%=@result%>">Save</button>
 
   </form>
