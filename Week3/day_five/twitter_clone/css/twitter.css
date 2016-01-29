@@ -1,0 +1,54 @@
+.main_nav {
+	/*position: fixed*/
+}
+
+.main_nav_btn {
+	margin-top: 8px;
+	border-color: transparent;
+}
+
+.main_nav_btn:hover {
+	background-color: transparent;
+	color: #009999;
+	border-color: transparent;
+
+}
+
+.twitter_icon {
+	width: 24px;
+	height: 21px;
+	margin: 15px 0px;
+}
+
+.banner{
+	width: 100%;
+	margin: auto;
+}
+
+.banner_container {
+	padding: 0;
+	height: 320px;
+	background-image: url(../super.jpg);
+	/*background-size: contain;*/
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+/*	height: 100%;*/
+	width: 100%;
+}
+
+.search {
+	border-radius: 15px;
+}
+
+.face {
+	height: 32px;
+	margin: 10px 0;
+	border-color: grey;
+	border-radius: 4px;
+}
+
+.tweet_button {
+	background-color: #009999;
+	color: white;
+}
