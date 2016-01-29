@@ -2,8 +2,12 @@ var read = require('read');
 var Quiz = function(questionsArray) {
 	this.questionsArray = questionsArray;
 	this.i = 0;
-	this.currentQuestion = questionsArray[this.i]
-
+	this.currentQuestion = questionsArray[this.i];
+	this.totalPoints = 0;
+	this.negPoints = this.currentQuestion.negPoints;
+	this.posPoints = this.currentQuestion.posPoints;
+	var randomnumber = Math.floor(Math.random()*11);
+	this.bonusQuestion = this.questionsArray[randomnumber - 1];
 }
 
 Quiz.prototype.print= function() {
@@ -19,6 +23,7 @@ Quiz.prototype.questionManager= function() {
 	else {
 		console.log("You now know all the capitals!");
 		console.log("CONGRATS!!!!!!!");
+		console.log(`Total Points: ${this.totalPoints}`)
 	};
 };
 
@@ -28,14 +33,33 @@ Quiz.prototype.checkAnswer= function(error, userAnswer) {
 	}
 	else if(userAnswer === this.currentQuestion.answer) {
 		this.i++;
-		this.currentQuestion = this.questionsArray[this.i]
-		console.log("That's right!");
-		console.log("-----------------------------")
-		this.questionManager();
+		if (this.bonusQuestion === this.currentQuestion) {
+			this.totalPoints += (this.posPoints *2);
+			this.currentQuestion = this.questionsArray[this.i]
+			console.log("You got the Bonus Question right! Double the points!");
+			console.log("-----------------------------")
+			this.questionManager();
+		}
+		else{
+			this.totalPoints += this.posPoints;
+			this.currentQuestion = this.questionsArray[this.i]
+			console.log("That's right!");
+			console.log("-----------------------------")
+			this.questionManager();
+		}
 	}
 	else {
-		console.log("You're wrong! Try again.");
-		this.questionManager();
+		if (this.bonusQuestion === this.currentQuestion) {
+			this.totalPoints -= (this.negPoints*2);
+			console.log("You got the Bonus Question Wrong :(");
+			this.questionManager();
+		}
+		else{
+			this.totalPoints -= this.negPoints;
+			console.log("You're wrong! Try again.");
+			this.questionManager();
+			
+		}
 	};
 };
 
