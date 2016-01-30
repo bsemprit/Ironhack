@@ -1,4 +1,5 @@
 var Questions = require("./lib/question.js");
+var User = require("./lib/user.js");
 var Quiz = require("./lib/quiz.js");
 var read = require('read');
 
@@ -13,6 +14,10 @@ question8 = new Questions(8, "What is the capital of Puerto Rico?", "San Juan", 
 question9 = new Questions(9, "What is the capital of Uruaguay?", "Montevideo", 4, 16);
 question10 = new Questions(10, "What is the capital of Argentina?", "Buenos Aires", 18, 2);
 // question11 = new Question(11, "What is the capital of United States?", "DC")
+var user1 = new User("Bianca", 0, 1);
+var user2 = new User("Anais", 0, 1);
 var quiz = new Quiz([question1, question2, question3, question4, question5, question6, question7, question8, question9, question10]);
 
-quiz.questionManager();
+user1.userManager();
+
+setTimeout(quiz.questionManager(), 10000);

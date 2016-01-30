@@ -14,7 +14,7 @@ Quiz.prototype.print= function() {
 	console.log(this.currentQuestion.question);
 }
 
-Quiz.prototype.questionManager= function() {
+Quiz.prototype.questionManager= function(user) {
 	
 	if (this.i < this.questionsArray.length) {
 		var askQuestion = {prompt: `Question ${this.i+1}: ${this.currentQuestion.question}`};
