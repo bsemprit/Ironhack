@@ -1,9 +1,10 @@
 class Room
-	attr_reader :name, :exit, :description
+	attr_reader :name, :exit, :description, :item
 	def initialize(name, exit, description)
 		@name = name
 		@exit = exit
 		@description = description
+		@item = ""
 	end
 
 	def display_description
@@ -19,15 +20,15 @@ class Room
 						]
 		item = ""
 		if @name == "The Super Small Room"
-			item = list_of_items[0]
+			@item = list_of_items[0]
 		elsif @name == "The Small Room"
-			item = list_of_items[1]
+			@item = list_of_items[1]
 		elsif @name == "The Real Room"
-			item = list_of_items[0]
+			@item = list_of_items[0]
 		elsif @name == "Where are you in the Room"
-			item = list_of_items[2]
+			@item = list_of_items[2]
 		end
-		item
+		@item
 	end
 
 end
