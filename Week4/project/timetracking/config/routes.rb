@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   get "/contact" => "site#contact"
 
+  get "/projects" => "projects#index" #projects controller that will have index action
+  #rails generate controller projects index ------ in terminal
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
