@@ -8,9 +8,10 @@
 
 # unless Project.all.any?
 25.times do |i|
-	Project.create(name:"Project #{i}", description: "Hello #{i}")
+	p = Project.create(name:"Project #{i}", description: "Hello #{i}")
+	p.entries.create(hours: i, minutes: 10 * i)
 end
 
-Project.create(name:"Ironhack", description: "Ironhack is awesome")
-Project.create(name: "Time Tracking app")
-Project.create name:"Recipes", description:"Awesome food."
+# Project.create(name:"Ironhack", description: "Ironhack is awesome")
+# Project.create(name: "Time Tracking app")
+# Project.create name:"Recipes", description:"Awesome food."

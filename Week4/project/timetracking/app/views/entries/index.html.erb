@@ -1,0 +1,10 @@
+<h1>Entries#index</h1>
+
+<%= @project.name %>
+
+<ul>
+	<% @project.entries.each do |entry|%>
+	<li>Hours: <%=entry.hours%> Minutes: <%entry.minutes%></li>
+	<%end%>
+</ul>
+
