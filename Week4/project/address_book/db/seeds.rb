@@ -8,5 +8,5 @@
 
 # unless Contact.all.any?
 10.times do |i|
-	Contact.create(name: "Contact Name #{i}", address: "#{i}st in Miami, FL", phone_number: 0001234567, email: "email@contact.me")
+	Contact.create(name: "Contact Name #{i}", address: "#{i}st in Miami, FL", phone_number: "0121234567", email: "email@contact.me")
 end
