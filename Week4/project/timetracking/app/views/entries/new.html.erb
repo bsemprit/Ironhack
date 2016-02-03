@@ -1,3 +1,14 @@
+<% if @entry.errors.any? %>
+<ul>
+	<% @entry.errors.fullmessages.each do |message| %>
+	<li><%= message%></li>
+	<%end%>
+</ul>
+
+
+
+
+
 <%= form_for [@project, @entry] do |f| %>
 	<%f.label :hours %>
 	<%= f.text_field :hours %>
