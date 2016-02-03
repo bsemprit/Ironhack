@@ -1,0 +1,24 @@
+<h1>Become a user!!!</h1>
+<ul>
+<% if @user.errors.any? %>
+	<% @users.errors.full_messages.each do |message| %>
+	<li><%=message%></li>
+	<%end%>
+	<% end %>
+</ul>
+
+
+
+
+<%=form_for @user do |f|%>
+	<%= f.label :name %>
+	<%= f.text_field :name%>
+	<br>
+	<%= f.label :email %>
+	<%= f.email_field :email%>
+	<br>
+	<%= f.submit "Save" %>
+	<%= link_to("Home", "/")%>
+	<%end%>
+	<br>
+ <%= link_to("Cancel", users_path) %>

@@ -1,0 +1,10 @@
+<h1>Welcome to <%= @user.name %> Homepage</h1>
+<br>
+<%= @user.name %>
+<br>
+<%=@user.email%>
+<br><br>
+
+ <%= link_to("Make a new user", new_user_path)%>
+ <br>
+  <%= link_to("Home", "/")%>
