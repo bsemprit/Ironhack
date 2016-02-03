@@ -35,4 +35,12 @@ class ContactsController < ApplicationController
   		@contact = Contact.find(params[:id])
   		render "show"
   end
+
+  def add_favorite
+  		id = params[:favorite_contact_id]
+  		@contact = Contact.find_by(id: id)
+  		@contact.make_favorite!
+  		@contact.save
+  		redirect_to "/"
+  end
 end

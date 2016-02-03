@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
    get "/contact/:id" => "contacts#show"
 
+   post "/contacts/add_favorite" => "contacts#add_favorite"
+
  
 
   # The priority is based upon order of creation: first created -> highest priority.
