@@ -1,7 +1,14 @@
 <ul>
 	<% @projects.each do  |p| %>
 	<% if p.description?%>
-		<li><%="ID #{p.id} - Name: #{p.name} -Description: #{p.description}"%></li>
+		<li>
+			<p><%="ID #{p.id} - Name: #{p.name} -Description: #{p.description}"%></p>
+			<!-- <a href="<%="projects/#{p.id}/entries"%>"><%=p.name%></a> -->
+			<!-- <a href="<%=project_entries_path(p)%>"><%=p.name%></a> -->
+			<%= link_to p.name, project_entries_path(p)%>
+			<!-- Using the prefix of the url to get the url with the parameter project. Use _path at the end -->
+		</li>
+
 	<% else %>
 		<li><%="ID #{p.id} - Name: #{p.name}"%></li>
 		<%end%>

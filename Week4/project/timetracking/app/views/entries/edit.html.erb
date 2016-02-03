@@ -1,16 +1,14 @@
-<% if @entry.errors.any? %>
+<%= @entry.errors.any?%>
 <ul>
 	<% @entry.errors.fullmessages.each do |message| %>
-	<li><%= message%></li>
-	<%end%>
+	<li>
+		<%= message %>
+	</li>
 </ul>
-<%end%>
-
-
 
 
 <%= form_for [@project, @entry] do |f| %>
-	<%=f.label :hours %>
+	<%= f.label :hours%>
 	<%= f.text_field :hours %>
 	<br>
 	<%= f.label :minutes %>
@@ -19,8 +17,9 @@
 	<%= f.label :date %>
 	<%= f.date_field :date %>
 	<br>
+	<%= f.submit "Save" %>
 
-	<%= f.submit "Save" %> 
-<% end %>
+	<%= link_to("Cancel", project_entries_path(@project))%>
 
-<%=link_to("Cancel", project_entries_path(@project))%>
+	<% end %>
+

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   # post "/projects/:project_id/entries" => "entries#create", as: :project_entries
 
   resources :projects, only:[:show, :new, :create, :index] do
-    resources :entries, only:[:index, :new, :create]
+    resources :entries, only:[:index, :new, :create, :create, :update, :edit]
   end
 
   # You can have the root of your site routed with "root"

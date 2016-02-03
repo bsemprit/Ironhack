@@ -4,7 +4,11 @@
 
 <ul>
 	<% @project.entries.each do |entry|%>
-	<li>Hours: <%=entry.hours%> Minutes: <%entry.minutes%></li>
+	<li>Hours: <%=entry.hours%> Minutes: <%entry.minutes%>
+	<%= link_to("Edit", edit_project_entry_path(@project, entry))%>
+	</li>
 	<%end%>
 </ul>
 
+<%=link_to("Projects", projects_path) %>
+<%= link_to("Entries", new_project_entry_path(@project))%>
