@@ -26,8 +26,10 @@ class EntriesController < ApplicationController
   	@entry = @project.entries.new entry_params
 
   	if @entry.save
+      flash[:notice] = "You created an entry!"
   		redirect_to action: "index", controller: "entries", project_id: @project.id
   	else
+      flash[:alert] = "You didn't create an entry"
   		render "new"
   	end
   end
@@ -38,9 +40,16 @@ class EntriesController < ApplicationController
 
   	if @entry.update_attributes(entry_params)
 	  	redirect_to project_entries_path(@project)
-	else
+  	else
 	  	render "edit"
-	end
+  	end
+  end
+
+  def destroy
+    project = Project.find(params[:project_id])
+    entry = project.entries.find(params[:id])
+    entry.destroy
+    redirect_to project_entries_path(params[:project_id])
   end
 
 private
