@@ -1,6 +1,8 @@
 class Project < ActiveRecord::Base
 	validates :name, presence: true, uniqueness: true, length: {maximum: 30}, format: {with: /\w+\s+/}
 	has_many :entries
+	has_many :participations
+	has_many :people, through: :participations
 
 	def self.clean_old
 		where("created_at <= ?", 1.week.ago).destroy_all
