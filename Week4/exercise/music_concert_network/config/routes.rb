@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get "/" => "concerts#index"
 
-  resources :concerts, only[:show, :index, :new] do
+  resources :concerts, only: [:show, :index, :new] do
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

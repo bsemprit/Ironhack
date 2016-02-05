@@ -1,2 +1,42 @@
-<h1>Concerts#index</h1>
-<p>Find me in app/views/concerts/index.html.erb</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-9">
+			
+			<h1>Concerts This Month </h1>
+			<ul>
+				<% @concerts_this_month.each do |concert| %>
+				<li>
+					<p>Artist: <%=link_to("#{concert.artist}", concert_path(concert.id)) %></p>
+					<p>Venue: <%=concert.venue%> | <%=concert.city%></p>
+					<p>Date: <%=concert.date%></p>
+					<p>Price: $<%=concert.price%></p>
+					<hr>
+					<br>
+				</li>
+				<%end%>
+
+			</ul>
+		</div>
+		<div class="col-sm-3">
+			
+			<aside class="concerts_other_months">
+				<h2>Upcoming Concerts</h2>
+				<ul>
+				<% @concerts_other_months.each do |concert| %>
+				<li>
+					<p>Artist: <%=link_to("#{concert.artist}", concert_path(concert.id)) %></p>
+					<p>Venue: <%=concert.venue%> | <%=concert.city%></p>
+					<p>Date: <%=concert.date%></p>
+					<p>Price: $<%=concert.price%></p>
+					<hr>
+					<br>
+				</li>
+				<%end%>
+
+				</ul>
+			</aside>
+		</div>
+	</div>
+</div>
+
+

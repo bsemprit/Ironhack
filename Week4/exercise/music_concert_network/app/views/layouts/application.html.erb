@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>MusicConcertNetwork</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body>
 	<header>
-		<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs navbar-fixed-top">
 		  <li role="presentation"><a href="/">Home</a></li>
 		  <li role="presentation"><a href="#">Concert List</a></li>
 		  <!-- <li role="presentation"><a href="#"></a></li> -->
@@ -17,6 +17,18 @@
 	</header>
 
 <%= yield %>
+
+	<footer>
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container-fluid">
+				<ul class="nav-tabs">
+				  <li role="presentation"><a href="/">Home</a></li>
+				  <li role="presentation"><a href="#">Concert List</a></li>
+				  <!-- <li role="presentation"><a href="#"></a></li> -->
+				</ul>
+			</div>
+		</nav>
+	</footer>
 
 </body>
 </html>
