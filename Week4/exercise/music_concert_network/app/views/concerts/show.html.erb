@@ -1,2 +1,19 @@
-<h1>Concerts#show</h1>
-<p>Find me in app/views/concerts/show.html.erb</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-9">
+			<h1><%=@concert.artist%></h3>
+			<h4><%=@concert.date%></h4>
+			<p><%=@concert.description%></p>
+
+
+			<%= render "comments/index" %>
+			<br>
+			<%= render "comments/new" %>
+
+
+		<div class="col-sm-3">
+			<h3><%=@concert.venue%></h3>
+			<p>Price: $<%=@concert.price%></p>
+		</div>
+	</div>
+</div>

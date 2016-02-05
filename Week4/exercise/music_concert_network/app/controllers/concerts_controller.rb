@@ -10,5 +10,18 @@ class ConcertsController < ApplicationController
   end
 
   def show
+  	@concert = Concert.find_by(id: params[:id])
+  	@comments = @concert.comments.all
+  	@comment = @concert.comments.new
+
+  	if @concert
+  		render "show"
+  	else
+  		render "no_concert"
+  	end
+  end
+
+  def no_concert
+  	puts "No concert found"
   end
 end
