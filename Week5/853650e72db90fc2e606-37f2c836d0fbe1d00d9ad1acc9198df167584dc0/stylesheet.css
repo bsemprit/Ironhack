@@ -1,0 +1,33 @@
+/** .unicorn-mode {
+	background-color: red;
+	color: brown;
+}*/
+
+.unicorn-mode p {
+	background-color: pink;
+}
+
+.unicorn-mode button {
+	background-color: green;
+}
+
+.unicorn-mode .btn {
+	background-color: blue;
+}
+
+.unicorn-mode .js-prepend ,.unicorn-mode .js-hello {
+	color: yellow;
+}
+
+.unicorn-mode .js-after , .unicorn-mode #the_world{
+	color: red;
+	background-color: grey;
+}
+
+.unicorn-mode body {
+	background-image: url("uni.png");
+	background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    background-size: 1300px 800px;
+}

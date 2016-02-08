@@ -7,6 +7,7 @@ class ConcertsController < ApplicationController
   end
 
   def new
+  	@concert = Concert.new
   end
 
   def show
@@ -24,4 +25,23 @@ class ConcertsController < ApplicationController
   def no_concert
   	puts "No concert found"
   end
+
+  def create
+  	@concert = Concert.new(concert_params)
+  	params[:concert]
+
+  	if concert.save
+  		redirect_to concert_path(@concert)
+  	else
+  		render :new
+  	end
+  end
+
+
+  private
+
+  def concert_params
+  	params.require(:concert).permit(:artist, :venue, :date, :price, :description, :city)
+  end
 end
+
