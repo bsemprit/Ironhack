@@ -5,7 +5,10 @@ $(document).ready(function(){
 		fetchCharacters();
 	})
 
-
+	$(".js-add-kylo").on("click", function(event) {
+		event.preventDefault();
+		publishCharacter();
+	})
 
 	var phrases = [
 	"I like pie",
@@ -26,6 +29,44 @@ $(document).ready(function(){
 
 	// $('.new_phrase').on('')
 });
+
+function publishCharacter() {
+	var newCharacter = {
+		name: $('.js-name').val(),
+		occupation: $('.js-occupation').val(),
+		weapon: $('.js-weapon').val()
+	}; //Remember to fill this out
+
+	$.ajax({
+		type: "POST",
+
+		url:"https://ironhack-characters.herokuapp.com/characters",
+
+		data: newCharacter,
+
+		success: function (response) {
+			// console.log(response.id);
+			var html = `
+			<li>
+				<h2> ${newCharacter.name} </h2>
+				<p> # ${response.id} </p>
+				<p> Occupation: ${newCharacter.occupation} </p>
+				<p> Weapon: ${newCharacter.weapon} </p>
+			</li>
+			`;
+
+			$(".js-characters-list").append(html);
+
+			alert("Emo Kylo Ren added successfully");
+		},
+
+		error: function (response) {
+			console.log(response);
+			alert("Couldn't add Kylo Ren. Too bad!");
+		}
+	});
+}
+
 
 function fetchCharacters () {
 	$.ajax({
