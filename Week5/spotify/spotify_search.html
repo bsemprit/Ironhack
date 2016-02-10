@@ -2,8 +2,15 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="jquery-2.2.0.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="app.js"></script>
+	<style>
+	ul {
+		list-style-type: none;
+	}
+	</style>
 </head>
 <body>
 	<h1>Artist</h1>
@@ -13,5 +20,43 @@
 	<ul class="artist-list">
 		
 	</ul>
+
+
+<div class="modal fade js-album-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="js-artist-modal-name"></h4>
+      </div>
+      <div class="modal-body">
+      <div class="js-modal-album-list">
+        <ul class="js-album-list">
+        	
+        </ul>	
+      </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="modal fade js-track-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="js-album-modal-name"></h4>
+      </div>
+      <div class="modal-body">
+      <div class="js-modal-track-list">
+        <ul class="js-track-list">
+        	
+        </ul>	
+      </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 </html>
