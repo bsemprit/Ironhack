@@ -30,6 +30,8 @@ $(document).on("ready", function (){
 		searchSpotifyArtist(artistID)
 		$('.js-modal').modal("show")
 	})
+
+
 })
 
 
@@ -43,7 +45,12 @@ function searchSpotify(searchInfo) {
 		success: function(response) {
 			console.log("Searched for tracks!", response);
 			var searchedSong = response.tracks.items[0];
-
+			var allOtherResults = response.tracks.items
+			console.log("All tracks",allOtherResults)
+			var seeMore = `
+				<button class="js-see-more-button"> See More </button>
+			`
+			$(".js-see-more-button").html(seeMore)
 			$(".title").text(searchedSong.name);
 			$(".author").text("|");
 			searchedSong.artists.forEach(function(artist) {
@@ -54,6 +61,14 @@ function searchSpotify(searchInfo) {
 			})
 			$('.js-player').attr('src', searchedSong.preview_url)
 			$(".coverImage").attr("src", searchedSong.album.images[0].url)
+
+				$('.js-see-more-button').on('click', function(event) {
+					event.preventDefault();
+					console.log("Can I see more?")
+					console.log(allOtherResults)
+					listOtherSongs(allOtherResults)
+					$('.js-modal-others').modal("show")
+				})
 		},
 
 		error: function(response) {
@@ -97,5 +112,15 @@ function searchSpotifyArtist (artistID) {
 		error: function(response) {
 			console.log("There was no artist!");
 		},
+	})
+}
+
+function listOtherSongs(songList) {
+	$(".js-others-body").empty()
+	songList.forEach(function(song) {
+		var html = `
+		<li><a href="${song.id}" class="${song.id}">${song.name}</a></li>
+		`
+		$(".js-others-body").append(html)
 	})
 }
