@@ -36,7 +36,19 @@ PokemonApp.Pokemon.prototype.render = function() {
 
 			
 			getPokemonImage(self.info);
+
 			$('.js-pokemon-modal').modal("show");
+
+			// while(self.info.evolutions.length !== 0) {
+			// 	evoNextURI = self.info.evolutions[0].resource_uri
+			// 	evoNext = getNextEvolution(evoNextURI)
+				
+			// }
+			$('.js-evolutions-btn').attr('data-pkmn-evoID',`${self.id}`)
+			var information = JSON.stringify(self.info)
+			$('.js-evolutions-btn').attr('data-pkmn-evoINFO', information)
+
+
 		},
 
 		error: function(response) {
@@ -45,11 +57,17 @@ PokemonApp.Pokemon.prototype.render = function() {
 	})
 };
 
+
+
+
 PokemonApp.Pokemon.idFromUri = function (pokemonUri) {
 	var uriSegments = pokemonUri.split("/");
 	var secondlast = uriSegments.length - 2;
 	return uriSegments[secondlast];
 }
+
+
+
 
 $(document).on("ready", function() {
 	$(".js-show-pokemon").on("click", function(event) {
@@ -59,6 +77,7 @@ $(document).on("ready", function() {
 		var pokemon = new PokemonApp.Pokemon(pokemonUri);
 		pokemon.render();
 	})
+
 })
 
 function getPokemonImage(pokemonInfo) {
@@ -85,4 +104,23 @@ function displayPokemonImage(imageUrl) {
 			`
 	$('.js-pkmn-image').html(img)
 }
-				
+
+function getPokemonDescription(pokemonInfo) {
+	var descriptionLatest = pokemonInfo.descriptions.length - 1
+	console.log(descriptionLatest)
+	var descriptionURI = pokemonInfo.descriptions[descriptionLatest].resource_uri
+
+	$.ajax({
+		url: `http://pokeapi.co${descriptionURI}`,
+
+		success: function(descriptionObj) {
+			console.log(descriptionObj);
+			var descriptionText = descriptionObj.description
+			$(".js-pkmn-description").text(descriptionText)
+
+		},
+		error: function(response) {
+			console.log("There is no description!")
+		},
+	}) 
+}

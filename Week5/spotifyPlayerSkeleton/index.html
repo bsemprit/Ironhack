@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title></title>
+	<script src="jquery-2.2.0.js"></script>
+	<script src="bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script src="app.js"></script>
+</head>
+<body>
+
+	<div class="widget">
+		<form class="search_form">
+			<input type="text" class="search-input" placeholder="Search Here">
+			<button class="search-button">Search</button>
+		</form>
+		<div class="header">
+		<!-- Try adding/removing these classes: -->
+		<!-- disabled -->
+		<!-- playing -->
+		<div class="btn-play js-button-play"></div>
+
+		<div class="metadata">
+		  <p class="title">Hunger of The Pine</p>
+		  <p class="author js-author-button-holder">alt-J</p>
+
+		  <div class="seekbar">
+		    <progress value="5" max="30" class="js-progress-bar"></progress>
+		  </div>
+		</div>
+		</div>
+		<div class="cover">
+		<img class="coverImage" src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+		</div>
+
+		<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31" class="js-player"></audio>
+	</div>
+
+
+	<div class="modal fade js-modal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <div class="modal-header">
+	        <!-- Close button -->
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span>&times;</span>
+	        </button>
+
+	        <h2 class="js-artist-modal-name">This is the modal's header.</h2>
+	      </div>
+
+	      <div class="modal-body">
+	        <p class="js-artist-modal-body-info">This is the modal's body.</p>
+	      </div>
+
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+</body>
+</html>

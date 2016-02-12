@@ -35,6 +35,10 @@
           <dt></dt>
           <dd class="js-pkmn-image"></dd>
 
+          <dt></dt>
+          <dd>
+              <button data-pkmn-evoID="" data-pkmn-evoINFO="" class="js-evolutions-btn btn">Evolutions</button>
+          </dd>
           <dt>Description:</dt>
           <dd class="js-pkmn-description"></dd>
 
@@ -69,6 +73,35 @@
           </dd>
 
         </dl>
+      </div><!-- .modal-body -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
+
+
+<!-- Evolutions Modal modal view (hidden at first) -->
+<div class="modal fade js-evolution-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+        <h3 class="modal-title">
+          <span class="js-evo-name">Feraligtr</span>
+        </h3>
+      </div><!-- .modal-header -->
+
+      <div class="modal-body js-ev-body">
+        <div class="js-ev-evolutions">
+          <ul class="js-ev-list">
+            
+          </ul>
+        </div>
+
       </div><!-- .modal-body -->
 
     </div><!-- .modal-content -->
