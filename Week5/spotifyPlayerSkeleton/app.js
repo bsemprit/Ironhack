@@ -69,6 +69,7 @@ function searchSpotify(searchInfo) {
 					listOtherSongs(allOtherResults)
 					$('.js-modal-others').modal("show")
 				})
+			$(".search-input").val("")
 		},
 
 		error: function(response) {
