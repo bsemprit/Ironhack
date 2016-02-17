@@ -10,4 +10,17 @@ class ApplicationController < ActionController::Base
   	end
   		@current_user
   end  
+
+  def authorize_user
+    unless current_user
+      flash[:message] = "Please log in or register. This is SENSITIVE INFORMATION. GET OUT....or register."
+      redirect_to root_path
+    end
+  end
+
+  def admin_only
+    unless current_user && current_user.role == "admin"
+      flash[:access_denied] = "Access denied. You must be an admin!! GET OUTTT."
+      redirect_to root_path
+    end
 end

@@ -45,6 +45,10 @@ function searchSpotify(searchInfo) {
 		success: function(response) {
 			console.log("Searched for tracks!", response);
 			var searchedSong = response.tracks.items[0];
+			if (searchedSong === undefined) {
+				alert("No tracks!")
+				return;
+			}
 			var allOtherResults = response.tracks.items
 			console.log("All tracks",allOtherResults)
 			var seeMore = `

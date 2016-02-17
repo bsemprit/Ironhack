@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # get 'concerts/index'
 
   # get 'concerts/new'
