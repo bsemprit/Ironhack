@@ -1,0 +1,12 @@
+<h1>Welcome to the auction site!</h1>
+
+<% if current_user.nil? %>
+
+	<p>Description of something in here</p>
+	<%= link_to("Sign up", new_user_registration_path) %><br>
+	<%= link_to("Log In", new_user_session_path) %>
+<% else %>
+	<%= "Hey #{@user.name}, welcome back!" %>
+	<%= link_to("All Products!", user_products_path) %><br>
+	<%= link_to("Make something and sell it here", new_user_product_path(@user.id)) %>
+<% end %>
