@@ -1,0 +1,31 @@
+<h1>List a new Product:</h1>
+
+<ul>
+	
+<% if @product.errors.any? %>
+
+	<% @product.errors.full_messages.each do |error_msg| %>
+	<li><%= error_msg %></li>
+	<% end %>
+	<% end %>
+	
+</ul>
+
+<%= form_for [@user, @product] do |f|%>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<br>
+	<%= f.label :deadline %>
+	<%= f.datetime_local_field :deadline %>
+	<br>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	<br>
+	<%= f.submit "Submit" %>
+	<%=link_to("Home", "/") %>
+
+<% end %>
+
+<br>
+
+

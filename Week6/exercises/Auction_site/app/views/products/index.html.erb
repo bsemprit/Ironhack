@@ -1,0 +1,13 @@
+<h1>Welcome to the Your Products Page!</h1>
+
+<ul>
+	<% @products.each do |product| %>
+	<li> 
+		Product: <%= link_to("#{product.title}", user_product_path(@user, product.id) )  %>
+		<p><%= product.deadline %></p>
+		<p> <%= product.description %> </p>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to("Home", "/") %>
