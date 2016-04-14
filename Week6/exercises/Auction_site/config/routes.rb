@@ -7,9 +7,10 @@ Rails.application.routes.draw do
 
   get "/products/:id" => "products#product_show"
 
+  get "/products/:id/reviews" => "reviews#index"
   resources :users, only: [:show] do
-    resources :products, only: [:index, :show, :create, :destroy, :new] do
-      resources :bids, only: [:create, :new]
+    resources :products, only: [:index, :create, :destroy, :new] do
+      resources :reviews, only: [:create, :new]
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

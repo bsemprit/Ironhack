@@ -8,7 +8,10 @@ class ProductsController < ApplicationController
 	end
 
 	def product_show
+		@user = current_user
 		@product = Product.find_by(id: params[:id])
+		@reviews = @product.reviews.all
+		@review = @product.reviews.new
 
 	end
 
@@ -16,17 +19,6 @@ class ProductsController < ApplicationController
 		@user = User.find_by(id: params[:user_id])
 		@products = @user.products.all
 
-	end
-
-	def show
-		@user = User.find_by(id: params[:user_id])
-		@product = @user.products.find_by(id: params[:id])
-
-		if @product
-			render "product_show"
-		else
-			redirect_to "/"
-		end
 	end
 
 	def create

@@ -1,0 +1,11 @@
+<ul class="js-review-list">
+<% @reviews.each do |review| %>
+	<li ><%= review.title %> <br>
+	<%= review.description %>
+	</li>
+	<hr>
+
+	<% end %>
+	
+</ul>
+

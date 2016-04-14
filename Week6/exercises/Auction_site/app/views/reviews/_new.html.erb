@@ -1,0 +1,11 @@
+<%= form_for [@user, @product, @review] do |f|%>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<br>
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	<br>
+	<%= f.submit :class => "btn btn-primary js-submit-review", :data => {:review_id => @review.id, :user_id => @user.id, :product_id => @product.id} %>
+<% end %>
+
+<br>
