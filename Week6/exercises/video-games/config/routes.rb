@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   delete "/api/tournaments" => "tournaments#destroy"
 
+  get "/api/tournaments/:tournament_id/players" => "players#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

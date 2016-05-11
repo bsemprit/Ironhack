@@ -29,16 +29,18 @@ function tournamentsIndex () {
 function deleteTournament(event) {
   event.preventDefault();
   tournamentId = $(event.currentTarget).val()
-  console.log(tournamentId)
+  // console.log(tournamentId)
 
   var request = $.ajax({
         url: '/api/tournaments',
         type: 'DELETE',
         data: {id: tournamentId},
         success: function(response){
-          console.log("This should work")
-          console.log(response)
-
+          // console.log("This should work")
+          // console.log(response)
+          // console.log(event.currentTarget)
+          var button = event.currentTarget
+          $(button).parent().remove()
         },
         error: function(){
           console.log("Error again")
